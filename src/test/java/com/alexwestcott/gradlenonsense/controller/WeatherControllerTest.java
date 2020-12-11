@@ -14,7 +14,7 @@ class WeatherControllerTest {
     private WeatherController weatherController;
 
     @Test
-    public void shouldReturnForecastForGivenLocation(){
+    public void shouldReturnForecastForGivenLocation() {
 
         String location = "Manchester";
 
