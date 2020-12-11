@@ -46,16 +46,5 @@ pipeline {
                 ])
             }
         }
-        stage("Email results") {
-            steps {
-                post {
-                    always {
-                        mail to: 'siyic94756@pxjtw.com',
-                        subject: "It went well",
-                        body: "Maybe"
-                    }
-                }
-            }
-        }
     }
 }
