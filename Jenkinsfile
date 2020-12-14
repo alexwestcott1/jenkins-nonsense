@@ -46,5 +46,20 @@ pipeline {
                 ])
             }
         }
+        stage("Package jar") {
+            steps {
+                sh "./gradlew build"
+            }
+        }
+        stage("Build Docker image") {
+            steps {
+                sh "./docker build -t alexwestcott2/jenkins-nonsense"
+            }
+        }
+        stage("Push Docker image") {
+            steps {
+                sh "./docker push alexwestcott2/jenkins-nonsense"
+            }
+        }
     }
 }
